@@ -1,0 +1,503 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image:
+        linear-gradient(#fff9eb, #fff2d3),
+        url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+/* ---------- LADO ESQUERDO ---------- */
+
+.container-LdEsquerdo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-right: 25px;
+    border-right: 4px solid #000000;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    flex-shrink: 0;
+    opacity: 0.6;
+    filter: grayscale(40%);
+}
+
+.foto-perfil-nome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 14.5px;
+}
+
+.foto-perfil-nome img {
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-do-usuario {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.arroba {
+    font-family: 'Playpen Sans', cursive;
+    margin: 0;
+    margin-left: 15px;
+    font-size: 15px;
+    font-style: italic;
+    color: #7a6a4f;
+}
+
+svg {
+    color: rgb(0, 0, 0);
+}
+
+.opcoes-visitante {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.botao-login,
+.botao-cadastro {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 330px;
+    height: 76px;
+    margin-left: 20px;
+    padding-left: 16px;
+
+    font-family: 'Poetsen One', cursive;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 2px solid black;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.botao-login {
+    background-color: #ffdeaf;
+}
+
+.botao-login:hover {
+    background-color: #ffc778;
+    transform: translateX(6px);
+}
+
+.botao-cadastro {
+    background-color: #fff5dd;
+}
+
+.botao-cadastro:hover {
+    background-color: #fff0cc;
+    transform: translateX(6px);
+}
+
+.aviso-sidebar {
+    margin: 26px 20px 0 20px;
+    padding: 14px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px dashed #b0a488;
+    border-radius: 12px;
+
+    font-family: 'Playpen Sans', cursive;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #6a5738;
+}
+
+/* ---------- MEIO ---------- */
+
+.conteudo-principal {
+    margin-left: 440px;
+    margin-right: 440px;
+    margin-top: 20px;
+    padding: 0 10px; /* pequeno respiro lateral pro zoom não cortar */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.conteudo-principal::-webkit-scrollbar {
+    display: none;
+}
+
+.container-post-preto {
+    border-radius: 15px;
+    border: 20px solid black;
+    background-color: black;
+    width: 100%;
+    height: 325px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 0 10px;
+    flex-shrink: 0;
+}
+
+.container-post-branco {
+    border-radius: 5px;
+    background-image: linear-gradient(#fff9eb, #fff2d3);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-post-branco textarea {
+    flex: 1;
+    width: 100%;
+    border: transparent;
+    resize: none;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 26px;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.botao {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 26px;
+}
+
+.botao .icone {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.botao .enviar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 60px;
+    width: 130px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao .enviar p {
+    font-size: 20px;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.botao .enviar:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.bi-paperclip {
+    color: white;
+    cursor: pointer;
+}
+
+/* ---------- POST ---------- */
+
+.post-preto {
+    border-radius: 15px;
+    border: 4px solid black;
+    background-color: #fff2d3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform-origin: center;
+}
+
+.post-preto:hover {
+    transform: scale(1.010);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.post-preto p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.foto-perfil-nome-post {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.foto-perfil-nome-post img {
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.foto-perfil-post {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    flex-shrink: 0;
+    display: block;
+}
+
+.nome-do-usuario-post {
+    font-family: 'Poetsen One', cursive;
+    font-size: 18px;
+    margin: 0;
+}
+
+.arroba-post {
+    font-family: 'Playpen Sans', cursive;
+    margin: 0;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.post-branco {
+    position: relative;
+    border: none;
+    border-top: 2px solid black;
+    background-color: transparent;
+    width: 100%;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.post-branco button {
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 60px;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.post-branco button svg {
+    width: 40px;
+    height: 40px;
+}
+
+.contador-like, .contador-bookmark, .contador-comentario, .contador-compartilhar {
+    font-family: 'Playpen Sans', cursive !important;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1;
+}
+
+/* ---------- MODAL DE LOGIN NECESSÁRIO ---------- */
+
+.modal-login-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.55);
+    z-index: 500;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-login-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-login-box {
+    position: relative;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    padding: 40px;
+    width: 420px;
+    max-width: 90vw;
+    text-align: center;
+
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-login-overlay.ativo .modal-login-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-login-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #2b2420;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-login-fechar:hover {
+    color: #5c4726;
+}
+
+.icone-login-necessario {
+    color: #8a6b3f;
+    margin-bottom: 14px;
+}
+
+.modal-login-box h3 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.modal-login-box p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 1.5;
+    margin: 0 0 22px 0;
+}
+
+.modal-login-botoes {
+    display: flex;
+    gap: 12px;
+}
+
+.botao-modal-login,
+.botao-modal-cadastro {
+    flex: 1;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.botao-modal-login {
+    background-color: #ffdeaf;
+    color: black;
+    box-shadow: 3px 3px 0 #2b2b2b;
+}
+
+.botao-modal-login:hover {
+    background-color: #ffc778;
+}
+
+.botao-modal-login:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 #2b2b2b;
+}
+
+.botao-modal-cadastro {
+    background-color: white;
+    color: black;
+}
+
+.botao-modal-cadastro:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+/* ---------- LADO DIREITO ---------- */
+
+.Lado-Direito {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-left: 25px;
+    border-left: 4px solid #060606;
+}
+
+.geralproa {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.condy {
+    cursor: default;
+}
+
+.geralproa p, .geralproa .condy {
+    font-family: 'Playpen Sans', cursive;
+}
+
+.geralproa a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}

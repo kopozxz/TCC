@@ -1,0 +1,413 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    
+    background-image:
+        linear-gradient(#fff9eb, #fff2d3),
+        url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+/*********LADO ESQUERDO*********/
+
+hr {
+    background-color: #000000;
+    margin-top: 40px;
+    max-width: 350px;
+}
+
+.container-LdEsquerdo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+
+    padding-right: 25px;
+    border-right: 4px solid #000000;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    flex-shrink: 0;
+}
+
+.foto-perfil-nome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 14.5px;
+}
+
+.foto-perfil-nome img {
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-do-usuario {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.arroba {
+    font-family: 'Playpen Sans', cursive;
+    margin: 0;
+    margin-left: 15px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+svg {
+    color: rgb(0, 0, 0);
+}
+
+.opcoes {
+    margin-top: 20px;
+}
+
+.opcoes a {
+    display: block;
+    width: 330px;
+    height: 76px;
+    margin-left: 20px;
+
+    background-color: #ffdeaf;
+    border-radius: 15px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.opcoes .notificacao {
+    font-family: 'Poetsen One', cursive;
+    background-color: #ffd190;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcoes .inicio, .opcoes .perfil, .opcoes .salvos,
+.opcoes .configuracao, .opcoes .sair {
+    font-family: 'Poetsen One', cursive;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcoes svg {
+    margin-left: 10px;
+}
+
+.opcoes button {
+    width: 100%;
+    height: 100%;
+
+    padding-left: 8px;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.opcoes button:hover {
+    background-color: #ffdeaf;
+    transform: translateX(6px);
+}
+
+/*********MEIO*********/
+
+.conteudo-principal {
+    margin-left: 440px;
+    margin-right: 440px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 25px;
+
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.conteudo-principal::-webkit-scrollbar {
+    display: none;
+}
+
+.cartao-notificacoes {
+    background-color: #fff2d3;
+    border: 4px solid black;
+    border-radius: 15px;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.titulo-notificacoes {
+    font-family: 'Poetsen One', cursive;
+    font-size: 26px;
+    margin: 0 0 24px 0;
+}
+
+.lista-notificacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.item-notificacao {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.item-notificacao:hover {
+    transform: scale(1.005);
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.item-notificacao.nao-lida {
+    background-color: #ffe6b3;
+    border: 2px solid #ffc778;
+}
+
+.item-notificacao.nao-lida:hover {
+    background-color: #ffdca0;
+}
+
+.foto-notificacao {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+    flex-shrink: 0;
+}
+
+.conteudo-notificacao {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.texto-notificacao {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto-notificacao strong {
+    font-family: 'Poetsen One', cursive;
+    font-weight: normal;
+    font-size: 17px;
+}
+
+.preview-comentario {
+    color: #6a5738;
+    font-style: italic;
+}
+
+.tempo-notificacao {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 13px;
+    color: #8a7a5c;
+}
+
+.ir-para-post {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffdeaf;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.ir-para-post:hover {
+    background-color: #ffc778;
+}
+
+.ir-para-post:active {
+    transform: scale(0.9);
+}
+
+/*****************LADO DIREITO****************/
+
+.Lado-Direito {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+
+    padding-left: 25px;
+    border-left: 4px solid #060606;
+}
+
+.geralproa {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.condy {
+    cursor: default;
+}
+
+.geralproa p, .geralproa .condy {
+    font-family: 'Playpen Sans', cursive;
+}
+
+.geralproa a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.modal-termos-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.6);
+    z-index: 600;
+
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-termos-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-termos-box {
+    position: relative;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    width: 600px;
+    max-width: 100%;
+    max-height: 80vh;
+
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-termos-overlay.ativo .modal-termos-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-termos-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: white;
+    border: 2px solid #2b2b2b;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2b2420;
+    z-index: 2;
+}
+
+.modal-termos-fechar:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.modal-termos-conteudo {
+    padding: 40px 36px;
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.modal-termos-marca {
+    text-align: center;
+    font-family: 'Poetsen One', cursive;
+    font-size: 26px;
+    margin: 0 0 6px 0;
+}
+
+.modal-termos-conteudo h2 {
+    text-align: center;
+    font-family: 'Poetsen One', cursive;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 26px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #2b2420;
+}
+
+.modal-termos-conteudo h3 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 17px;
+    margin: 22px 0 8px 0;
+}
+
+.modal-termos-conteudo h3:first-of-type {
+    margin-top: 0;
+}
+
+.modal-termos-conteudo p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3a3128;
+    margin: 0 0 10px 0;
+}

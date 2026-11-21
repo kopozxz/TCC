@@ -1,0 +1,26 @@
+KLOUT
+
+O Klout foi uma plataforma de mensuração de influência em redes sociais, criada em 2008. Seu produto central era o Klout Score, uma nota de 1 a 100 que indicava o grau de influência de uma pessoa ou marca no ambiente digital (SEARCH ENGINE JOURNAL, 2018). Quanto mais alta a nota, maior seria a capacidade do usuário de gerar reações e repercussão em sua rede.
+
+Segundo a própria empresa, o cálculo reunia mais de 400 sinais, provenientes de sete redes conectadas pelo usuário, e era atualizado diariamente. Esses sinais combinavam atributos como a relação entre as reações geradas e a quantidade de conteúdo publicado. A nota final era formada por três medidas: alcance real (true reach), amplificação (amplification) e impacto na rede (network impact). O alcance real mede quantas pessoas de fato reagem ao que o usuário publica, e não apenas quantas o seguem (WAMDA, 2012). A amplificação indica quantas vezes uma mensagem é repassada. O impacto na rede reflete a influência das pessoas que interagem com o usuário.
+
+Para o monitoramento de ações digitais, o Klout ajudava a identificar perfis influentes e a avaliar o engajamento gerado por um conteúdo. Esse uso tinha relevância para marcas que buscavam parceiros para divulgar produtos e serviços. A ferramenta, porém, era alvo de controvérsias (TECHCRUNCH, 2018). Por reduzir a influência a um único número, a nota podia não refletir a qualidade real do relacionamento com o público.
+
+Em 2014, a Lithium Technologies adquiriu o Klout por cerca de 200 milhões de dólares (LAVINE, 2014). Em maio de 2018, a empresa anunciou o encerramento do serviço. O motivo apontado pelo presidente da Lithium foi que o Klout, como serviço independente, não estava alinhado à estratégia de longo prazo da companhia (SEARCH ENGINE JOURNAL, 2018). O Klout foi desativado em 25 de maio de 2018 (TECHCRUNCH, 2018). Mesmo assim, ele ajudou a popularizar a ideia de medir influência digital por meio de métricas de engajamento, base das ferramentas de monitoramento atuais.
+
+
+REFERÊNCIAS
+
+KLOUT. In: THE SAGE ENCYCLOPEDIA OF MASS MEDIA AND SOCIETY. [S. l.]: SAGE. Disponível em: https://sk.sagepub.com/ency/edvol/embed/the-sage-encyclopedia-of-mass-media-and-society/chpt/klout. Acesso em: 10 nov. 2026.
+
+KLOUT Score Formula Insights. In: MARTECH ZONE. [S. l.]. Disponível em: https://martech.zone/klout. Acesso em: 10 nov. 2026.
+
+KLOUT loses influence, announces shutdown May 25. Search Engine Journal, [S. l.], 2018. Disponível em: https://www.searchenginejournal.com/klout-loses-influence-announces-shutdown-may-25/252827/. Acesso em: 10 nov. 2026.
+
+KLOUT Score. Social Media Today, [S. l.]. Disponível em: https://www.socialmediatoday.com/content/klout-klout-score. Acesso em: 10 nov. 2026.
+
+LAVINE, Robert. Lithium Technologies adds Klout in $200m deal. Global Venturing, [S. l.], 28 mar. 2014. Disponível em: https://globalventuring.com/blog/2014/03/28/lithium-technologies-adds-klout-in-200m-deal/. Acesso em: 10 nov. 2026.
+
+RIP Klout. TechCrunch, [S. l.], 10 maio 2018. Disponível em: https://techcrunch.com/2018/05/10/rip-klout/. Acesso em: 10 nov. 2026.
+
+WAMDA. How to increase your social media influence with Klout. Wamda, [S. l.], 2012. Disponível em: https://www.wamda.com/en/2012/02/how-to-increase-your-social-media-influence-with-klout. Acesso em: 10 nov. 2026.

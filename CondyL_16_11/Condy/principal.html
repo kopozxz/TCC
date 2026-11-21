@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/principal.css">
+    <title>Condy - Sua Rede Social Acadêmica</title>
+    <link rel="shortcut icon" type="image/png" href="IMAGENS/logo_condy_branco.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container-LdEsquerdo">
+                <div class="foto-perfil-nome">
+                    <img src="IMAGENS/foto_de_perfil.png" class="foto-perfil" alt="Foto de Perfil">
+                    <div class="info-usuario">
+                        <h1 class="nome-do-usuario">Nome de Usuário</h1>
+                        <h2 class="arroba">@Arroba</h2>
+                    </div>
+                </div>
+
+                <div class="opcoes">
+                    <a href="principal.html">
+                        <button class="inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+                            </svg>
+                            Inicio
+                        </button>
+                    </a>
+
+                    <br>
+
+                    <a href="perfil.html">
+                        <button class="perfil"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                            </svg>
+                            Perfil
+                        </button>
+                    </a>
+
+                    <br>
+
+                    <a href="notificacoes.html">
+                        <button class="notificacao"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                            </svg>
+                            Notificações
+                        </button>
+                    </a>
+
+                    <br>
+
+                    <a href="salvos.html">
+                        <button class="salvos"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                            </svg>
+                            Salvos
+                        </button>
+                    </a>
+
+                    <br>
+
+                    <a href="configuracoes.html">
+                        <button class="configuracao">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+                            </svg>Configuração
+                        </button>
+                    </a>
+
+                    <br>
+
+                    <hr size="5" noshade align="left">
+                    <a href="index.html">
+                        <button class="sair">Sair
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+
+        <form action="./PHP/post.php" method="post" class="container-post-preto criar-post">
+            <div class="container-post-branco">
+
+                <textarea name="mensagem" placeholder="O que você está pensando?" required></textarea>
+                
+                <div class="preview-anexo" id="previewAnexo"></div>
+            </div>
+            <div class="botao">
+                <div class="wrapper-clip">
+                    <div class="menu-opcoes" id="menuOpcoes">
+
+                        <button type="button" class="opcao-icone" id="btnImagem" title="Adicionar imagem">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+                                <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"/>
+                            </svg>
+                        </button>
+
+                        <button type="button" class="opcao-icone" id="btnArquivo" title="Anexar arquivo">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark" viewBox="0 0 16 16">
+                                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
+                            </svg>
+                        </button>
+
+                    </div>
+
+                    <button type="button" class="icone" id="botaoClip">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+                            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" class="enviar">
+                    <p>Enviar</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                    </svg>
+                </button>
+            </div>
+            
+
+            <!-- inputs escondidos para anexos -->
+            <input type="file" id="inputImagem" name="imagem" accept="image/*" style="display: none;">
+            <input type="file" id="inputArquivo" name="arquivo" style="display: none;">
+        
+        </form>
+
+    </main>
+    
+    <footer class="Lado-Direito">
+        <div class="input-wrapper">
+            <input type="text" id="campoBusca" placeholder=" O que você procura?">
+            <button type="button" class="limpar-input" id="botaoLimpar">✕</button>
+        </div>
+        
+        <div class="geralproa">
+            <a href="#" class="abrir-termos">
+                <p>Termos de Uso | Termos de Privacidade</p>
+            </a>
+            <p class="condy">©2026 Condy</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE TERMOS -->
+    <div class="modal-termos-overlay" id="modalTermosOverlay">
+        <div class="modal-termos-box">
+            <button class="modal-termos-fechar" id="modalTermosFechar" title="Fechar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                </svg>
+            </button>
+
+            <div class="modal-termos-conteudo">
+                <p class="modal-termos-marca">©2026 Condy</p>
+                <h2>Termos de Uso<br>e<br>Termos de Privacidade</h2>
+
+                <h3>1. Nossos Serviços</h3>
+                <p>Nossa missão é entregar às pessoas o poder de florescer o intelecto através da educação. Para isso, fornecemos uma experiência personalizada onde você pode:</p>
+                <p>
+                    • Conectar-se com outras pessoas que possuem o mesmo objetivo: Ajudamos você a encontrar pessoas e conteúdo que sejam relevantes para sua área de estudo;<br>
+                    • Expressar sua produção acadêmica: Oferecemos ferramentas para compartilhar atualizações de fotos, vídeos e, principalmente, resultados de pesquisas e redações (respeitando as configurações de privacidade);<br>
+                    • Promover a integridade e segurança: Trabalhamos para manter a autenticidade e a confidencialidade dos dados, combatendo condutas nocivas ou enganosas.
+                </p>
+
+                <h3>2. Compromissos do Usuário</h3>
+                <p>Em troca do acesso à nossa comunidade, exigimos os seguintes compromissos:</p>
+                <p>
+                    • Identidade Real e Prestação de Contas: Para garantir a responsabilidade acadêmica, você deve usar o mesmo nome que utiliza na vida cotidiana;<br>
+                    • Elegibilidade: Você deve ter pelo menos 13 anos de idade para usar o serviço;<br>
+                    • Uso Aceitável: Você não pode compartilhar conteúdo que viole direitos de propriedade intelectual de terceiros ou que seja ilegal, enganoso ou discriminatório;<br>
+                    • É estritamente proibida a extração de dados (scraping) sem permissão prévia por escrito.
+                </p>
+
+                <h3>3. Propriedade Intelectual e Licenciamento</h3>
+                <p>Reconhecemos que o conteúdo que você cria e compartilha é de sua propriedade ("o que é seu, continua sendo seu"). No entanto, para operar o serviço, precisamos que você nos conceda certas permissões:</p>
+                <p>
+                    • Licença de Uso: Ao publicar conteúdo protegido por direitos de propriedade intelectual, você nos concede uma licença mundial, não exclusiva e livre de royalties para hospedar, usar, distribuir, modificar e copiar seu conteúdo exclusivamente para fins de fornecimento e melhoria dos serviços;<br>
+                    • Terminação da Licença: Esta licença termina quando o conteúdo é excluído de nossos sistemas (processo que pode levar até 90 dias após a solicitação de exclusão do conteúdo ou da conta).
+                </p>
+
+                <h3>4. Combate à Desinformação</h3>
+                <p>Trabalhamos com verificadores de fatos independentes para combater a desinformação no âmbito acadêmico. Se um conteúdo for classificado como impreciso, poderemos adicionar avisos para fornecer contexto adicional aos usuários.</p>
+
+                <h3>5. Limitação de Responsabilidade</h3>
+                <p>Nossos serviços são fornecidos "no estado em que se encontram" (AS IS). Não garantimos que a plataforma será sempre segura ou livre de erros. Não controlamos o que as pessoas dizem ou fazem e não somos responsáveis por condutas ofensivas ou inadequadas de outros usuários.</p>
+
+                <h3>6. Encerramento da Conta</h3>
+                <p>Podemos suspender ou desativar permanentemente sua conta se determinarmos que você violou estes termos de forma grave ou repetida, ou se houver risco de exposição legal para a plataforma.</p>
+
+                <h3>7. Disposições Finais</h3>
+                <p>
+                    • Atualizações: Podemos revisar estes termos ocasionalmente para refletir melhor nossos serviços ou mudanças na lei. Você será notificado antes que as alterações entrem em vigor;<br>
+                    • Resolução de Disputas: Qualquer reclamação ou disputa decorrente destes termos será resolvida nos tribunais competentes conforme a jurisdição estabelecida no registro da plataforma.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL DE CONFIRMAÇÃO DE DENÚNCIA/APAGAR -->
+    <div class="modal-confirmacao-overlay" id="modalConfirmacaoOverlay">
+        <div class="modal-confirmacao-box">
+            <p>Tem certeza que deseja denunciar e apagar este post?</p>
+            <div class="modal-confirmacao-botoes">
+                <button class="btn-cancelar-denuncia" id="btnCancelarDenuncia">Cancelar</button>
+                <button class="btn-confirmar-denuncia" id="btnConfirmarDenuncia">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE POST EXPANDIDO -->
+    <div class="modal-overlay" id="modalOverlay">
+        <button class="modal-fechar" id="modalFechar" title="Fechar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+        </button>
+        <div class="modal-post-container" id="modalPostContainer"></div>
+    </div>
+
+    <!-- MODAL DE IMAGEM EXPANDIDA -->
+    <div class="modal-imagem-overlay" id="modalImagemOverlay">
+        <button class="modal-fechar" id="modalImagemFechar" title="Fechar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+        </button>
+        <img src="" alt="Imagem em tamanho grande" id="modalImagemConteudo">
+    </div>
+
+    <script src="JAVASCRIPT/sessao.js"></script>
+    <script src="JAVASCRIPT/principal.js"></script>
+</body>
+</html>

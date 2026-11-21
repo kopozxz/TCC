@@ -1,0 +1,875 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: light;
+}
+
+body {
+    margin: 0;
+    font-family: 'Playpen Sans', cursive;
+    min-height: 100vh;
+}
+
+.pagina-login {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---------- VITRINE DA MARCA ---------- */
+
+.vitrine-marca {
+    position: relative;
+    flex: 1.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    overflow: hidden;
+    cursor: default;
+
+    background-color: #2b2420;
+    background-image:
+        radial-gradient(circle at 20% 20%, #3a3128, transparent 50%),
+        radial-gradient(circle at 80% 80%, #342c24, transparent 50%),
+        linear-gradient(to right, transparent 70%, #221208 100%);
+
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+.vitrine-marca::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle 280px at var(--mouse-x) var(--mouse-y),
+        rgba(255, 222, 175, 0.08),
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.vitrine-marca:hover::before {
+    opacity: 1;
+}
+
+.doodles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.doodle {
+    position: absolute;
+    color: #ffdeaf;
+    opacity: 0.18;
+}
+
+.doodle-1 { width: 140px; top: 8%; left: 10%; animation: flutuar 7s ease-in-out infinite; }
+.doodle-2 { width: 120px; top: 65%; left: 6%; animation: flutuar 8s ease-in-out infinite 1s; }
+.doodle-3 { width: 100px; top: 12%; right: 12%; animation: flutuar 6.5s ease-in-out infinite 0.5s; }
+.doodle-4 { width: 160px; bottom: 8%; right: 8%; animation: flutuar 9s ease-in-out infinite 1.5s; }
+.doodle-5 { width: 70px; top: 48%; right: 30%; animation: girar 14s linear infinite; }
+.doodle-6 { width: 110px; bottom: 18%; left: 20%; animation: flutuar 7.5s ease-in-out infinite 0.8s; }
+.doodle-7 { width: 90px; top: 35%; left: 42%; animation: flutuar 8.5s ease-in-out infinite 1.2s; }
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-14px) rotate(3deg); }
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.conteudo-vitrine {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    text-align: left;
+}
+
+.logo-vitrine {
+    width: 90px;
+    margin-bottom: 36px;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
+}
+
+.titulo-vitrine {
+    font-family: 'Poetsen One', cursive;
+    font-size: 40px;
+    line-height: 1.25;
+    color: #fff5dd;
+    margin: 0 0 20px 0;
+}
+
+.linha-titulo {
+    display: block;
+    opacity: 0;
+    transform: translateY(14px);
+    animation: revelarLinha 0.6s ease forwards;
+    animation-delay: var(--atraso);
+}
+
+@keyframes revelarLinha {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtitulo-vitrine {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #d8cdb8;
+    margin: 0;
+    opacity: 0;
+    animation: revelarLinha 0.6s ease forwards;
+    animation-delay: 0.85s;
+}
+
+/* ---------- ÁREA DE AUTENTICAÇÃO ---------- */
+
+.area-autenticacao {
+    position: relative;
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 30px 20px 30px;
+    overflow: hidden;
+    cursor: default;
+
+    background-color: #faecd7;
+    background-image:
+        linear-gradient(#fff5dd, #ffeec7),
+        url("https://www.transparenttextures.com/patterns/clean-gray-paper.png"),
+        linear-gradient(to left, transparent 70%, rgba(34, 18, 8, 0.12) 100%);
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, 100% 100%;
+
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+.area-autenticacao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle 280px at var(--mouse-x) var(--mouse-y),
+        rgba(34, 18, 8, 0.07),
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.area-autenticacao:hover::before {
+    opacity: 1;
+}
+
+.doodles-claro {
+    z-index: 0;
+}
+
+.doodles-claro .doodle {
+    color: #2b2420;
+    opacity: 0.08;
+}
+
+.doodle-a { width: 110px; top: 10%; left: 8%; animation: flutuar 7.2s ease-in-out infinite 0.3s; }
+.doodle-b { width: 90px; bottom: 12%; left: 12%; animation: girar 16s linear infinite; }
+.doodle-c { width: 120px; top: 14%; right: 10%; animation: flutuar 8s ease-in-out infinite 1s; }
+.doodle-d { width: 85px; bottom: 10%; right: 8%; animation: flutuar 6.8s ease-in-out infinite 0.6s; }
+.doodle-e { width: 95px; top: 55%; right: 22%; animation: flutuar 9s ease-in-out infinite 1.4s; }
+
+.cartao-autenticacao {
+    position: relative;
+    z-index: 1;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    width: 440px;
+    max-width: 100%;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.seletor-abas {
+    display: flex;
+}
+
+.botao-aba {
+    flex: 1;
+    font-family: 'Poetsen One', cursive;
+    font-size: 17px;
+    padding: 16px 0;
+    border: none;
+    border-bottom: 2px solid #2b2b2b;
+    background-color: #f0e0c0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.botao-aba:not(:last-child) {
+    border-right: 2px solid #2b2b2b;
+}
+
+.botao-aba:hover {
+    background-color: #e8d4a8;
+}
+
+.botao-aba.ativo {
+    background-color: #fff5dd;
+    border-bottom-color: transparent;
+}
+
+.formulario-autenticacao {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 32px 40px 36px 40px;
+
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.formulario-autenticacao.ativo {
+    display: flex;
+}
+
+.formulario-autenticacao.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.formulario-autenticacao h2 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    text-align: left;
+    margin: 0 0 14px 0;
+}
+
+.formulario-autenticacao label {
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 6px;
+    color: #4a4a4a;
+}
+
+.formulario-autenticacao input[type="text"],
+.formulario-autenticacao input[type="password"],
+.formulario-autenticacao input[type="date"] {
+    height: 42px;
+    border: none;
+    border-bottom: 2px solid #b0a488;
+    border-radius: 0;
+    padding: 0 4px;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+    color: #2b2420;
+    caret-color: #2b2420;
+    transition: border-color 0.2s ease;
+}
+
+.formulario-autenticacao input[type="text"]:focus,
+.formulario-autenticacao input[type="password"]:focus,
+.formulario-autenticacao input[type="date"]:focus {
+    border-bottom-color: #2b2b2b;
+}
+
+.formulario-autenticacao input.campo-invalido {
+    border-bottom-color: #b23b2e;
+}
+
+.mensagem-erro {
+    color: #b23b2e;
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 2px 0 0 0;
+    min-height: 15px;
+    display: none;
+}
+
+.mensagem-erro.ativo {
+    display: block;
+}
+
+/* dica das regras da senha (sempre visível no cadastro) */
+.dica-senha {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #7a6a4f;
+    margin: 2px 0 0 0;
+}
+
+/* ---------- ESQUECI MINHA SENHA ---------- */
+
+.esqueci-senha {
+    text-align: right;
+    margin: 2px 0 0 0;
+    font-size: 13px;
+}
+
+.esqueci-senha span {
+    color: #8a6b3f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.esqueci-senha span:hover {
+    color: #5c4726;
+}
+
+/* ---------- ACEITE DOS TERMOS (cadastro) ---------- */
+
+.aceite-termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.aceite-termos input[type="checkbox"] {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: #2b2420;
+}
+
+.aceite-termos label {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 13px;
+    font-weight: 400;
+    color: #4a4a4a;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.link-termos,
+.link-termos:visited {
+    color: #8a6b3f;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.link-termos:hover {
+    color: #5c4726;
+}
+
+/* ---------- BOTÕES ---------- */
+
+.botao-enviar {
+    margin-top: 18px;
+    height: 46px;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    background-color: #ffdeaf;
+    font-family: 'Poetsen One', cursive;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #2b2b2b;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.botao-enviar:hover {
+    background-color: #ffc778;
+}
+
+.botao-enviar:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 #2b2b2b;
+}
+
+.trocar-aba {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    color: #4a4a4a;
+}
+
+.trocar-aba span {
+    color: #8a6b3f;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.trocar-aba span:hover {
+    color: #5c4726;
+}
+
+/* ---------- RODAPÉ ---------- */
+
+.rodape-login {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    font-family: 'Playpen Sans', cursive;
+    font-size: 12px;
+    color: #8a7a5c;
+    padding: 0 20px;
+}
+
+.rodape-login a {
+    color: #8a7a5c;
+    text-decoration: none;
+}
+
+.rodape-login a:hover {
+    color: #5c4726;
+    text-decoration: underline;
+}
+
+.rodape-login .separador {
+    color: #c3b596;
+}
+
+.rodape-login .copyright {
+    color: #8a7a5c;
+}
+
+/* ---------- MODAL DE RECUPERAÇÃO DE SENHA ---------- */
+
+.modal-senha-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.55);
+    z-index: 500;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-senha-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-senha-box {
+    position: relative;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    padding: 36px;
+    width: 400px;
+    max-width: 90vw;
+
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-senha-overlay.ativo .modal-senha-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-senha-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #2b2420;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-senha-fechar:hover {
+    color: #5c4726;
+}
+
+.modal-senha-passo {
+    text-align: center;
+}
+
+.modal-senha-passo h3 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.modal-senha-texto {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 1.5;
+    margin: 0 0 18px 0;
+}
+
+.modal-senha-passo label {
+    display: block;
+    text-align: left;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #4a4a4a;
+}
+
+.modal-senha-passo input {
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-bottom: 2px solid #b0a488;
+    padding: 0 4px;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+    color: #2b2420;
+    caret-color: #2b2420;
+    text-align: left;
+    transition: border-color 0.2s ease;
+}
+
+.modal-senha-passo input:focus {
+    border-bottom-color: #2b2b2b;
+}
+
+.modal-senha-passo input.campo-invalido {
+    border-bottom-color: #b23b2e;
+}
+
+.modal-senha-passo .mensagem-erro {
+    text-align: left;
+}
+
+.modal-senha-passo .botao-enviar {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.icone-confirmacao {
+    color: #8a6b3f;
+    margin-bottom: 10px;
+}
+
+/* ---------- MODAL DE VERIFICAÇÃO DE IDADE ---------- */
+
+.modal-idade-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.7);
+    z-index: 900;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-idade-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-idade-box {
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    padding: 40px;
+    width: 400px;
+    max-width: 90vw;
+    text-align: center;
+
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-idade-overlay.ativo .modal-idade-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.icone-idade {
+    color: #8a6b3f;
+    margin-bottom: 12px;
+}
+
+.modal-idade-box h3 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.modal-idade-box p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 1.5;
+    margin: 0 0 24px 0;
+}
+
+.modal-idade-botoes {
+    display: flex;
+    gap: 12px;
+}
+
+.modal-idade-botoes button {
+    flex: 1;
+    height: 46px;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.botao-idade-sim {
+    background-color: #ffdeaf;
+    box-shadow: 3px 3px 0 #2b2b2b;
+}
+
+.botao-idade-sim:hover {
+    background-color: #ffc778;
+}
+
+.botao-idade-sim:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 #2b2b2b;
+}
+
+.botao-idade-nao {
+    background-color: white;
+}
+
+.botao-idade-nao:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+/* ---------- TELA DE BLOQUEIO ---------- */
+
+.tela-bloqueio {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2b2420;
+    z-index: 1000;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.tela-bloqueio.ativo {
+    display: flex;
+}
+
+.bloqueio-box {
+    text-align: center;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.icone-bloqueio {
+    color: #ff9494;
+    margin-bottom: 16px;
+}
+
+.bloqueio-box h2 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 26px;
+    color: #fff5dd;
+    margin: 0 0 14px 0;
+}
+
+.bloqueio-box p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+    color: #d8cdb8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---------- MODAL DE TERMOS ---------- */
+
+.modal-termos-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.6);
+    z-index: 600;
+
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-termos-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-termos-box {
+    position: relative;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    width: 600px;
+    max-width: 100%;
+    max-height: 80vh;
+
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-termos-overlay.ativo .modal-termos-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-termos-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: white;
+    border: 2px solid #2b2b2b;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2b2420;
+    z-index: 2;
+}
+
+.modal-termos-fechar:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.modal-termos-conteudo {
+    padding: 40px 36px;
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.modal-termos-marca {
+    text-align: center;
+    font-family: 'Poetsen One', cursive;
+    font-size: 26px;
+    margin: 0 0 6px 0;
+}
+
+.modal-termos-conteudo h2 {
+    text-align: center;
+    font-family: 'Poetsen One', cursive;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 26px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #2b2420;
+}
+
+.modal-termos-conteudo h3 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 17px;
+    margin: 22px 0 8px 0;
+}
+
+.modal-termos-conteudo h3:first-of-type {
+    margin-top: 0;
+}
+
+.modal-termos-conteudo p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3a3128;
+    margin: 0 0 10px 0;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 900px) {
+    .pagina-login {
+        flex-direction: column;
+    }
+
+    .vitrine-marca {
+        padding: 40px 30px;
+        min-height: 260px;
+    }
+
+    .titulo-vitrine {
+        font-size: 28px;
+    }
+
+    .area-autenticacao {
+        padding: 30px 20px 24px 20px;
+    }
+
+    .rodape-login {
+        margin-top: 20px;
+        font-size: 11px;
+    }
+}

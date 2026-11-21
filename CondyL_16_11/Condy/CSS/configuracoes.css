@@ -1,0 +1,832 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image:
+        linear-gradient(#fff9eb, #fff2d3),
+        url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+hr {
+    background-color: #000000;
+    margin-top: 40px;
+    max-width: 350px;
+}
+
+/* ---------- LADO ESQUERDO ---------- */
+
+.container-LdEsquerdo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-right: 25px;
+    border-right: 4px solid #000000;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    flex-shrink: 0;
+}
+
+.foto-perfil-nome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 14.5px;
+}
+
+.foto-perfil-nome img {
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-do-usuario {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.arroba {
+    font-family: 'Playpen Sans', cursive;
+    margin: 0;
+    margin-left: 15px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+svg {
+    color: rgb(0, 0, 0);
+}
+
+.opcoes {
+    margin-top: 20px;
+}
+
+.opcoes a {
+    display: block;
+    width: 330px;
+    height: 76px;
+    margin-left: 20px;
+    background-color: #ffdeaf;
+    border-radius: 15px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.opcoes .configuracao {
+    font-family: 'Poetsen One', cursive;
+    background-color: #ffd190;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcoes .inicio, .opcoes .perfil, .opcoes .notificacao,
+.opcoes .salvos, .opcoes .sair {
+    font-family: 'Poetsen One', cursive;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcoes svg {
+    margin-left: 10px;
+}
+
+.opcoes button {
+    width: 100%;
+    height: 100%;
+    padding-left: 8px;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.opcoes button:hover {
+    background-color: #ffdeaf;
+    transform: translateX(6px);
+}
+
+/* ---------- MEIO ---------- */
+
+.conteudo-principal {
+    box-sizing: border-box;
+    margin-left: 440px;
+    margin-right: 440px;
+    margin-top: 20px;
+
+    width: auto;
+    max-width: none;
+
+    height: calc(100vh - 40px);
+    max-height: calc(100vh - 40px);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.conteudo-principal::-webkit-scrollbar {
+    display: none;
+}
+
+.cartao-configuracoes {
+    background-color: #fff2d3;
+    border: 4px solid black;
+    border-radius: 15px;
+    width: 100%;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+}
+
+.titulo-configuracoes {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0 0 16px 0;
+}
+
+.secao-config {
+    margin-bottom: 20px;
+}
+
+.secao-config:last-child {
+    margin-bottom: 0;
+}
+
+.secao-config h2 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 17px;
+    margin: 0 0 8px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+
+.linha-config {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.linha-config:last-child {
+    border-bottom: none;
+}
+
+.info-linha-config {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+}
+
+.rotulo-config {
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.descricao-config {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 12px;
+    color: #7a6a4f;
+    line-height: 1.3;
+}
+
+/* botões secundários */
+
+.botao-config-secundario {
+    flex-shrink: 0;
+    font-family: 'Poetsen One', cursive;
+    font-size: 14px;
+    padding: 8px 16px;
+    background-color: #ffdeaf;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.botao-config-secundario:hover {
+    background-color: #ffc778;
+}
+
+.botao-config-secundario:active {
+    transform: scale(0.96);
+}
+
+/* interruptores (switch) */
+
+.interruptor {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.trilho {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #e0d5bd;
+    border: 2px solid black;
+    border-radius: 32px;
+    transition: background-color 0.25s ease;
+}
+
+.trilho::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+}
+
+.interruptor input:checked + .trilho {
+    background-color: #ffc778;
+}
+
+.interruptor input:checked + .trilho::before {
+    transform: translateY(-50%) translateX(24px);
+}
+
+.interruptor.desativado {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.interruptor.desativado .trilho {
+    cursor: not-allowed;
+}
+
+.interruptor input:disabled + .trilho {
+    background-color: #ffc778;
+}
+
+/* zona de perigo */
+
+.zona-perigo h2 {
+    color: #b23b2e;
+    border-bottom-color: #b23b2e;
+}
+
+.botao-perigo {
+    flex-shrink: 0;
+    font-family: 'Poetsen One', cursive;
+    font-size: 14px;
+    padding: 8px 16px;
+    background-color: #ff8080;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.botao-perigo:hover {
+    background-color: #ff5c5c;
+}
+
+.botao-perigo:active {
+    transform: scale(0.96);
+}
+
+/* ---------- MODAL DE CONFIRMAÇÃO ---------- */
+
+.modal-confirmacao-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 400;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-confirmacao-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-confirmacao-box {
+    background-color: #fff5dd;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 24px;
+    max-width: 380px;
+    width: 90%;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-confirmacao-overlay.ativo .modal-confirmacao-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-confirmacao-box p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.modal-confirmacao-botoes {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.modal-confirmacao-botoes button {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.btn-cancelar-confirmacao {
+    background-color: white;
+}
+
+.btn-cancelar-confirmacao:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.btn-confirmar-confirmacao {
+    background-color: #ff8080;
+}
+
+.btn-confirmar-confirmacao:hover {
+    background-color: #ff5c5c;
+}
+
+/* ---------- MODAL: VERIFICAÇÃO DE IDADE (documentos) ---------- */
+
+.modal-documento-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.6);
+    z-index: 450;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-documento-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-documento-box {
+    position: relative;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    padding: 36px;
+    width: 480px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-documento-overlay.ativo .modal-documento-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-documento-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: white;
+    border: 2px solid #2b2b2b;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2b2420;
+}
+
+.modal-documento-fechar:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.modal-documento-passo h3 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.modal-documento-texto {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4a4a4a;
+    margin: 0 0 20px 0;
+}
+
+.rotulo-documento {
+    display: block;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 600;
+    font-size: 14px;
+    color: #4a4a4a;
+    margin: 14px 0 6px 0;
+}
+
+.campo-documento {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    background-color: white;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+    color: #2b2420;
+    outline: none;
+    cursor: pointer;
+}
+
+.campo-documento.invalido {
+    border-color: #b23b2e;
+}
+
+.mensagem-erro-documento {
+    display: none;
+    margin: 6px 0 0 0;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #b23b2e;
+}
+
+.mensagem-erro-documento.ativo {
+    display: block;
+}
+
+.area-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: 24px 16px;
+    border: 2px dashed #b0a488;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.area-upload:hover,
+.area-upload:focus-visible,
+.area-upload.arrastando {
+    background-color: rgba(255, 199, 120, 0.25);
+    border-color: #8a6b3f;
+    outline: none;
+}
+
+.area-upload.invalida {
+    border-color: #b23b2e;
+}
+
+.area-upload svg {
+    color: #8a6b3f;
+}
+
+.upload-titulo {
+    margin: 0;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2b2420;
+}
+
+.upload-dica {
+    margin: 0;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 12px;
+    color: #7a6a4f;
+}
+
+.lista-documentos {
+    list-style: none;
+    margin: 14px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item-documento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.item-documento svg {
+    flex-shrink: 0;
+    color: #8a6b3f;
+}
+
+.nome-documento {
+    flex: 1;
+    min-width: 0;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+    color: #2b2420;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tamanho-documento {
+    flex-shrink: 0;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 12px;
+    color: #7a6a4f;
+}
+
+.remover-documento {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #999;
+}
+
+.remover-documento svg {
+    color: inherit;
+}
+
+.remover-documento:hover {
+    color: #b23b2e;
+}
+
+.botoes-documento {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.botoes-documento button,
+.btn-documento-largo {
+    flex: 1;
+    height: 46px;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-cancelar-documento {
+    background-color: white;
+}
+
+.btn-cancelar-documento:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.btn-enviar-documento {
+    background-color: #ffdeaf;
+    box-shadow: 3px 3px 0 #2b2b2b;
+}
+
+.btn-enviar-documento:hover {
+    background-color: #ffc778;
+}
+
+.btn-enviar-documento:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 #2b2b2b;
+}
+
+.btn-documento-largo {
+    width: 100%;
+    margin-top: 6px;
+}
+
+#passoDocumentoEnviado {
+    text-align: center;
+}
+
+.icone-documento-ok {
+    color: #8a6b3f;
+    margin-bottom: 10px;
+}
+
+/* ---------- MODAL DE TERMOS ---------- */
+
+.modal-termos-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.6);
+    z-index: 600;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-termos-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-termos-box {
+    position: relative;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    width: 600px;
+    max-width: 100%;
+    max-height: 80vh;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-termos-overlay.ativo .modal-termos-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-termos-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: white;
+    border: 2px solid #2b2b2b;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2b2420;
+    z-index: 2;
+}
+
+.modal-termos-fechar:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.modal-termos-conteudo {
+    padding: 40px 36px;
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.modal-termos-marca {
+    text-align: center;
+    font-family: 'Poetsen One', cursive;
+    font-size: 26px;
+    margin: 0 0 6px 0;
+}
+
+.modal-termos-conteudo h2 {
+    text-align: center;
+    font-family: 'Poetsen One', cursive;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 26px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #2b2420;
+}
+
+.modal-termos-conteudo h3 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 17px;
+    margin: 22px 0 8px 0;
+}
+
+.modal-termos-conteudo h3:first-of-type {
+    margin-top: 0;
+}
+
+.modal-termos-conteudo p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3a3128;
+    margin: 0 0 10px 0;
+}
+
+/* ---------- LADO DIREITO ---------- */
+
+.Lado-Direito {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-left: 25px;
+    border-left: 4px solid #060606;
+}
+
+.geralproa {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.condy {
+    cursor: default;
+}
+
+.geralproa p, .geralproa .condy {
+    font-family: 'Playpen Sans', cursive;
+}
+
+.geralproa a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}

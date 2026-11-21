@@ -1,0 +1,906 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image:
+        linear-gradient(#fff9eb, #fff2d3),
+        url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+/*********LADO ESQUERDO*********/
+
+hr {
+    background-color: #000000;
+    margin-top: 40px;
+    max-width: 350px;
+}
+
+.container-LdEsquerdo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-right: 25px;
+    border-right: 4px solid #000000;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    flex-shrink: 0;
+}
+
+.foto-perfil-nome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 14.5px;
+}
+
+.foto-perfil-nome img {
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-do-usuario {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.arroba {
+    font-family: 'Playpen Sans', cursive;
+    margin: 0;
+    margin-left: 15px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+svg {
+    color: rgb(0, 0, 0);
+}
+
+.opcoes {
+    margin-top: 20px;
+}
+
+.opcoes a {
+    display: block;
+    width: 330px;
+    height: 76px;
+    margin-left: 20px;
+    background-color: #ffdeaf;
+    border-radius: 15px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.opcoes .perfil {
+    font-family: 'Poetsen One', cursive;
+    background-color: #ffd190;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcoes .inicio, .opcoes .notificacao, .opcoes .salvos,
+.opcoes .configuracao, .opcoes .sair {
+    font-family: 'Poetsen One', cursive;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcoes svg {
+    margin-left: 10px;
+}
+
+.opcoes button {
+    width: 100%;
+    height: 100%;
+    padding-left: 8px;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.opcoes button:hover {
+    background-color: #ffdeaf;
+    transform: translateX(6px);
+}
+
+/*********MEIO*********/
+
+.conteudo-principal {
+    box-sizing: border-box;
+    margin-left: 440px;
+    margin-right: 440px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.conteudo-principal::-webkit-scrollbar {
+    display: none;
+}
+
+.cartao-perfil {
+    background-color: #fff2d3;
+    border: 4px solid black;
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* ---------- BANNER ---------- */
+
+.banner-wrapper {
+    position: relative;
+}
+
+.banner-perfil {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    max-height: 240px;
+    background-color: #ffd190;
+    border-radius: 11px 11px 0 0;
+    overflow: hidden;
+}
+
+.imagem-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.degrade-banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 65%;
+    background: linear-gradient(to bottom, rgba(255, 242, 211, 0), #fff2d3 95%);
+    pointer-events: none;
+}
+
+/* ---------- TOPO: FOTO + NOME ---------- */
+
+.topo-perfil {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    padding: 0 40px;
+    margin-top: -80px;
+}
+
+.wrapper-foto-perfil-grande {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.foto-perfil-grande {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid black;
+    object-fit: cover;
+    background-color: #fff2d3;
+    display: block;
+}
+
+.wrapper-nome-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 8px;
+}
+
+.nome-perfil-grande {
+    font-family: 'Poetsen One', cursive;
+    font-size: 30px;
+    margin: 0;
+}
+
+.arroba-perfil {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 18px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+
+.botao-editar-perfil {
+    flex-shrink: 0;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #ffdeaf;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.botao-editar-perfil:hover {
+    background-color: #ffc778;
+}
+
+.botao-editar-perfil:active {
+    transform: scale(0.96);
+}
+
+/* ---------- BIO ---------- */
+
+.bio-perfil {
+    margin: 0;
+    padding: 20px 40px 0 40px;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #3a3128;
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+.bio-perfil.vazia {
+    color: #8a7a5c;
+    font-style: italic;
+}
+
+/* ---------- INFORMAÇÕES DA CONTA ---------- */
+
+.secao-info-conta {
+    margin: 28px 40px 0 40px;
+    padding: 28px 0 36px 0;
+    border-top: 2px solid black;
+}
+
+.secao-info-conta h2 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 22px;
+    margin: 0 0 18px 0;
+}
+
+.linha-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-family: 'Playpen Sans', cursive;
+}
+
+.linha-info:last-child {
+    border-bottom: none;
+}
+
+.rotulo-info {
+    font-weight: 600;
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+.valor-info {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pontos-senha {
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.botao-alterar-senha {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+    color: #8a6b3f;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.botao-alterar-senha:hover {
+    color: #5c4726;
+}
+
+/* ---------- MODAL: EDITAR PERFIL ---------- */
+
+
+
+.modal-editar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.6);
+    z-index: 500;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-editar-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-editar-box {
+    position: relative;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    padding: 34px 36px;
+    width: 560px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-editar-overlay.ativo .modal-editar-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-editar-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: white;
+    border: 2px solid #2b2b2b;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2b2420;
+}
+
+.modal-editar-fechar:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.titulo-editar {
+    font-family: 'Poetsen One', cursive;
+    font-size: 24px;
+    margin: 0 0 22px 0;
+}
+
+.bloco-editar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.rotulo-editar {
+    font-family: 'Poetsen One', cursive;
+    font-size: 16px;
+}
+
+.preview-banner-editar {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffd190;
+}
+
+.preview-banner-editar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.linha-foto-editar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.preview-foto-editar {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid black;
+    flex-shrink: 0;
+}
+
+.acoes-editar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.botao-editar-acao {
+    font-family: 'Poetsen One', cursive;
+    font-size: 14px;
+    padding: 9px 16px;
+    background-color: #ffdeaf;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.botao-editar-acao:hover {
+    background-color: #ffc778;
+}
+
+.botao-editar-acao:active {
+    transform: scale(0.96);
+}
+
+.botao-editar-acao.perigo {
+    background-color: #ff8080;
+}
+
+.botao-editar-acao.perigo:hover {
+    background-color: #ff5c5c;
+}
+
+.campo-bio {
+    width: 100%;
+    min-height: 110px;
+    resize: none;
+    padding: 12px 14px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2b2420;
+    caret-color: #2b2420;
+    outline: none;
+}
+
+.contador-bio {
+    align-self: flex-end;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 12px;
+    color: #8a7a5c;
+}
+
+.botoes-editar {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.botoes-editar button {
+    flex: 1;
+    height: 46px;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.botao-cancelar-editar {
+    background-color: white;
+}
+
+.botao-cancelar-editar:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.botao-salvar-editar {
+    background-color: #ffdeaf;
+    box-shadow: 3px 3px 0 #2b2b2b;
+}
+
+.botao-salvar-editar:hover {
+    background-color: #ffc778;
+}
+
+.botao-salvar-editar:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 #2b2b2b;
+}
+
+/* ---------- MODAL: RECORTE (foto e banner) ---------- */
+
+.modal-recorte-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 700;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-recorte-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-recorte-box {
+    background-color: #fff5dd;
+    border: 4px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    width: auto;
+    min-width: 420px;
+    max-width: 95vw;
+    max-height: 95vh;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.modal-recorte-box h3 {
+    font-family: 'Poetsen One', cursive;
+    margin: 0;
+}
+
+.area-recorte {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #222;
+    cursor: grab;
+    touch-action: none;
+    flex-shrink: 0;
+}
+
+.area-recorte:active {
+    cursor: grabbing;
+}
+
+.area-recorte img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    max-width: none;
+}
+
+.moldura-recorte {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.moldura-recorte.circulo {
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.moldura-recorte.retangulo {
+    border-radius: 0;
+    border: 2px solid white;
+    box-shadow: none;
+}
+
+.rotulo-zoom {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rotulo-zoom input[type="range"] {
+    width: 100%;
+}
+
+.botoes-recorte {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.botoes-recorte button {
+    flex: 1;
+    height: 46px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.botao-cancelar-recorte {
+    background-color: white;
+}
+
+.botao-cancelar-recorte:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.botao-confirmar-recorte {
+    background-color: #ffdeaf;
+}
+
+.botao-confirmar-recorte:hover {
+    background-color: #ffc778;
+}
+
+.botoes-recorte button:active {
+    transform: scale(0.97);
+}
+
+/* ---------- MODAL: TERMOS ---------- */
+
+.modal-termos-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 18, 8, 0.6);
+    z-index: 600;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-termos-overlay.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-termos-box {
+    position: relative;
+    background-color: #fff5dd;
+    border: 2px solid #2b2b2b;
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #2b2b2b;
+    width: 600px;
+    max-width: 100%;
+    max-height: 80vh;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-termos-overlay.ativo .modal-termos-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-termos-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: white;
+    border: 2px solid #2b2b2b;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2b2420;
+    z-index: 2;
+}
+
+.modal-termos-fechar:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.modal-termos-conteudo {
+    padding: 40px 36px;
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.modal-termos-marca {
+    text-align: center;
+    font-family: 'Poetsen One', cursive;
+    font-size: 26px;
+    margin: 0 0 6px 0;
+}
+
+.modal-termos-conteudo h2 {
+    text-align: center;
+    font-family: 'Poetsen One', cursive;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 26px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #2b2420;
+}
+
+.modal-termos-conteudo h3 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 17px;
+    margin: 22px 0 8px 0;
+}
+
+.modal-termos-conteudo h3:first-of-type {
+    margin-top: 0;
+}
+
+.modal-termos-conteudo p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3a3128;
+    margin: 0 0 10px 0;
+}
+
+/*****************LADO DIREITO****************/
+
+.Lado-Direito {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-left: 25px;
+    border-left: 4px solid #060606;
+}
+
+.geralproa {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.condy {
+    cursor: default;
+}
+
+.geralproa p, .geralproa .condy {
+    font-family: 'Playpen Sans', cursive;
+}
+
+.geralproa a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.campo-nome-editar {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 16px;
+    color: #2b2420;
+    caret-color: #2b2420;
+    outline: none;
+}
+
+.mensagem-erro-editar {
+    display: none;
+    margin: 0;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 12px;
+    color: #b23b2e;
+}
+
+.mensagem-erro-editar.ativo {
+    display: block;
+}
+
+/* ---------- BLOCOS BLOQUEADOS ("Em Manutenção") ---------- */
+
+.bloco-bloqueado {
+    position: relative;
+    cursor: not-allowed;
+}
+
+/* tudo dentro do bloco fica esmaecido e sem interação */
+.bloco-bloqueado > * {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* aviso que aparece ao passar o mouse */
+.bloco-bloqueado::after {
+    content: attr(data-aviso);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    padding: 8px 18px;
+    background-color: #2b2420;
+    color: #fff5dd;
+    border-radius: 8px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 5;
+}
+
+.bloco-bloqueado:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}

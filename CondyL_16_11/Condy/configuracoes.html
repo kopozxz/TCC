@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/configuracoes.css">
+    <title>Condy - Configurações</title>
+    <link rel="shortcut icon" type="image/png" href="IMAGENS/logo_condy_branco.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container-LdEsquerdo">
+            <div class="foto-perfil-nome">
+                <img src="IMAGENS/foto_de_perfil.png" class="foto-perfil" alt="Foto de Perfil">
+                <div class="info-usuario">
+                    <h1 class="nome-do-usuario">Nome de Usuário</h1>
+                    <h2 class="arroba">@Arroba</h2>
+                </div>
+            </div>
+
+            <div class="opcoes">
+                <a href="principal.html">
+                    <button class="inicio">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                        </svg>
+                        Inicio
+                    </button>
+                </a>
+
+                <br>
+
+                <a href="perfil.html">
+                    <button class="perfil">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                        </svg>
+                        Perfil
+                    </button>
+                </a>
+
+                <br>
+
+                <a href="notificacoes.html">
+                    <button class="notificacao">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                        </svg>
+                        Notificações
+                    </button>
+                </a>
+
+                <br>
+
+                <a href="salvos.html">
+                    <button class="salvos">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                        </svg>
+                        Salvos
+                    </button>
+                </a>
+
+                <br>
+
+                <a href="configuracoes.html">
+                    <button class="configuracao">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                        </svg>
+                        Configuração
+                    </button>
+                </a>
+
+                <br>
+
+                <hr size="5" noshade align="left">
+                <a href="index.html">
+                    <button class="sair">Sair
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="conteudo-principal conteudo-configuracoes">
+
+        <div class="cartao-configuracoes">
+
+            <h1 class="titulo-configuracoes">Configurações</h1>
+
+            <!-- PREFERÊNCIAS -->
+            <section class="secao-config">
+                <h2>Preferências</h2>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Notificações por e-mail</span>
+                        <span class="descricao-config">Receba um aviso quando alguém interagir com seus posts.</span>
+                    </div>
+                    <label class="interruptor desativado" title="Em Manutenção">
+                        <input type="checkbox" id="switchEmail" checked disabled>
+                        <span class="trilho"></span>
+                    </label>
+                </div>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Perfil público</span>
+                        <span class="descricao-config">Permitir que outros usuários vejam seu perfil completo.</span>
+                    </div>
+                    <label class="interruptor desativado" title="Em Manutenção">
+                        <input type="checkbox" id="switchPerfilPublico" checked disabled>
+                        <span class="trilho"></span>
+                    </label>
+                </div>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Mostrar contadores</span>
+                        <span class="descricao-config">Exibir número de curtidas e comentários nos seus posts.</span>
+                    </div>
+                    <label class="interruptor desativado" title="Em Manutenção">
+                        <input type="checkbox" id="switchContadores" checked disabled>
+                        <span class="trilho"></span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- CONTA -->
+            <section class="secao-config">
+                <h2>Conta</h2>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Editar perfil</span>
+                        <span class="descricao-config">Altere sua foto, nome e informações pessoais.</span>
+                    </div>
+                    <a href="perfil.html" class="botao-config-secundario">Abrir perfil</a>
+                </div>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Alterar senha</span>
+                        <span class="descricao-config">Recomendamos trocar sua senha periodicamente.</span>
+                    </div>
+                    <button class="botao-config-secundario" id="botaoAlterarSenha">Alterar</button>
+                </div>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Sair da conta</span>
+                        <span class="descricao-config">Encerrar sessão neste dispositivo.</span>
+                    </div>
+                    <a href="index.html" class="botao-config-secundario" data-sair>Sair</a>
+                </div>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Verificar Idade</span>
+                        <span class="descricao-config">Verifique sua idade para desbloquear todo o conteúdo disponível da plataforma. RG, Passaporte ou CNH.</span>
+                    </div>
+                    <!-- agora é um BOTÃO (antes era um link para o index.html) -->
+                    <button type="button" class="botao-config-secundario" id="botaoVerificarIdade">Enviar Documento</button>
+                </div>
+            </section>
+
+            <!-- SOBRE -->
+            <section class="secao-config">
+                <h2>Sobre</h2>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Termos de Uso & Termos de Privacidade</span>
+                        <span class="descricao-config">Conheça as regras de utilização e da privacidade da plataforma.</span>
+                    </div>
+                    <a href="#" class="botao-config-secundario abrir-termos">Ler</a>
+                </div>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Sobre Nós</span>
+                        <span class="descricao-config">Conheça mais sobre esse projeto e seus criadores.</span>
+                    </div>
+                    <a href="sobrenos.html" target="_blank" class="botao-config-secundario">Sobre Nós</a>
+                </div>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Versão</span>
+                        <span class="descricao-config">Condy 1.0 — 2026</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ZONA DE PERIGO -->
+            <section class="secao-config zona-perigo">
+                <h2>Zona de perigo</h2>
+
+                <div class="linha-config">
+                    <div class="info-linha-config">
+                        <span class="rotulo-config">Apagar conta</span>
+                        <span class="descricao-config">Esta ação é permanente e não pode ser desfeita. Todos os seus posts e dados serão removidos.</span>
+                    </div>
+                    <button class="botao-perigo" id="botaoApagarConta">Apagar conta</button>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="Lado-Direito">
+        <div class="geralproa">
+            <a href="#" class="abrir-termos">
+                <p>Termos de Uso | Termos de Privacidade</p>
+            </a>
+            <p class="condy">©2026 Condy</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE TERMOS -->
+    <div class="modal-termos-overlay" id="modalTermosOverlay">
+        <div class="modal-termos-box">
+            <button class="modal-termos-fechar" id="modalTermosFechar" title="Fechar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                </svg>
+            </button>
+
+            <div class="modal-termos-conteudo">
+                <p class="modal-termos-marca">©2026 Condy</p>
+                <h2>Termos de Uso<br>e<br>Termos de Privacidade</h2>
+
+                <h3>1. Nossos Serviços</h3>
+                <p>Nossa missão é entregar às pessoas o poder de florescer o intelecto através da educação. Para isso, fornecemos uma experiência personalizada onde você pode:</p>
+                <p>
+                    • Conectar-se com outras pessoas que possuem o mesmo objetivo: Ajudamos você a encontrar pessoas e conteúdo que sejam relevantes para sua área de estudo;<br>
+                    • Expressar sua produção acadêmica: Oferecemos ferramentas para compartilhar atualizações de fotos, vídeos e, principalmente, resultados de pesquisas e redações (respeitando as configurações de privacidade);<br>
+                    • Promover a integridade e segurança: Trabalhamos para manter a autenticidade e a confidencialidade dos dados, combatendo condutas nocivas ou enganosas.
+                </p>
+
+                <h3>2. Compromissos do Usuário</h3>
+                <p>Em troca do acesso à nossa comunidade, exigimos os seguintes compromissos:</p>
+                <p>
+                    • Identidade Real e Prestação de Contas: Para garantir a responsabilidade acadêmica, você deve usar o mesmo nome que utiliza na vida cotidiana;<br>
+                    • Elegibilidade: Você deve ter pelo menos 13 anos de idade para usar o serviço;<br>
+                    • Uso Aceitável: Você não pode compartilhar conteúdo que viole direitos de propriedade intelectual de terceiros ou que seja ilegal, enganoso ou discriminatório;<br>
+                    • É estritamente proibida a extração de dados (scraping) sem permissão prévia por escrito.
+                </p>
+
+                <h3>3. Propriedade Intelectual e Licenciamento</h3>
+                <p>Reconhecemos que o conteúdo que você cria e compartilha é de sua propriedade ("o que é seu, continua sendo seu"). No entanto, para operar o serviço, precisamos que você nos conceda certas permissões:</p>
+                <p>
+                    • Licença de Uso: Ao publicar conteúdo protegido por direitos de propriedade intelectual, você nos concede uma licença mundial, não exclusiva e livre de royalties para hospedar, usar, distribuir, modificar e copiar seu conteúdo exclusivamente para fins de fornecimento e melhoria dos serviços;<br>
+                    • Terminação da Licença: Esta licença termina quando o conteúdo é excluído de nossos sistemas (processo que pode levar até 90 dias após a solicitação de exclusão do conteúdo ou da conta).
+                </p>
+
+                <h3>4. Combate à Desinformação</h3>
+                <p>Trabalhamos com verificadores de fatos independentes para combater a desinformação no âmbito acadêmico. Se um conteúdo for classificado como impreciso, poderemos adicionar avisos para fornecer contexto adicional aos usuários.</p>
+
+                <h3>5. Limitação de Responsabilidade</h3>
+                <p>Nossos serviços são fornecidos "no estado em que se encontram" (AS IS). Não garantimos que a plataforma será sempre segura ou livre de erros. Não controlamos o que as pessoas dizem ou fazem e não somos responsáveis por condutas ofensivas ou inadequadas de outros usuários.</p>
+
+                <h3>6. Encerramento da Conta</h3>
+                <p>Podemos suspender ou desativar permanentemente sua conta se determinarmos que você violou estes termos de forma grave ou repetida, ou se houver risco de exposição legal para a plataforma.</p>
+
+                <h3>7. Disposições Finais</h3>
+                <p>
+                    • Atualizações: Podemos revisar estes termos ocasionalmente para refletir melhor nossos serviços ou mudanças na lei. Você será notificado antes que as alterações entrem em vigor;<br>
+                    • Resolução de Disputas: Qualquer reclamação ou disputa decorrente destes termos será resolvida nos tribunais competentes conforme a jurisdição estabelecida no registro da plataforma.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE CONFIRMAÇÃO -->
+    <div class="modal-confirmacao-overlay" id="modalConfirmacaoOverlay">
+        <div class="modal-confirmacao-box">
+            <p id="textoConfirmacao">Deseja mesmo apagar esta conta?</p>
+            <div class="modal-confirmacao-botoes">
+                <button class="btn-cancelar-confirmacao" id="btnCancelarConfirmacao">Cancelar</button>
+                <button class="btn-confirmar-confirmacao" id="btnConfirmarConfirmacao">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: VERIFICAÇÃO DE IDADE (envio de documento) -->
+    <div class="modal-documento-overlay" id="modalDocumentoOverlay">
+        <div class="modal-documento-box">
+            <button class="modal-documento-fechar" id="modalDocumentoFechar" title="Fechar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                </svg>
+            </button>
+
+            <!-- PASSO 1: escolher tipo e adicionar arquivos -->
+            <div class="modal-documento-passo" id="passoEnviarDocumento">
+                <h3>Verificar idade</h3>
+                <p class="modal-documento-texto">Envie um documento oficial com foto e data de nascimento para desbloquear todo o conteúdo da plataforma.</p>
+
+                <label class="rotulo-documento" for="tipoDocumento">Tipo de documento</label>
+                <select id="tipoDocumento" class="campo-documento">
+                    <option value="">Selecione...</option>
+                    <option value="rg">RG</option>
+                    <option value="cnh">CNH</option>
+                    <option value="passaporte">Passaporte</option>
+                </select>
+                <p class="mensagem-erro-documento" id="erroTipoDocumento"></p>
+
+                <span class="rotulo-documento">Arquivos</span>
+                <div class="area-upload" id="areaUpload" tabindex="0" role="button" aria-label="Adicionar arquivos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                        <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+                    </svg>
+                    <p class="upload-titulo">Clique para escolher ou arraste os arquivos aqui</p>
+                    <p class="upload-dica">JPG, PNG ou PDF · até 5 MB cada · máximo de 2 arquivos (frente e verso)</p>
+                </div>
+                <input type="file" id="inputDocumento" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" multiple style="display: none;">
+                <p class="mensagem-erro-documento" id="erroArquivoDocumento"></p>
+
+                <ul class="lista-documentos" id="listaDocumentos"></ul>
+
+                <div class="botoes-documento">
+                    <button type="button" class="btn-cancelar-documento" id="btnCancelarDocumento">Cancelar</button>
+                    <button type="button" class="btn-enviar-documento" id="btnEnviarDocumento">Enviar</button>
+                </div>
+            </div>
+
+            <!-- PASSO 2: confirmação -->
+            <div class="modal-documento-passo" id="passoDocumentoEnviado" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-check-circle icone-documento-ok" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                </svg>
+                <h3>Documentos adicionados</h3>
+                <p class="modal-documento-texto">Seus documentos foram adicionados e ficam aguardando a verificação.</p>
+                <button type="button" class="btn-enviar-documento btn-documento-largo" id="btnFecharDocumentoEnviado">Entendi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JAVASCRIPT/sessao.js"></script>
+    <script src="JAVASCRIPT/configuracao.js"></script>
+</body>
+</html>
